@@ -67,7 +67,7 @@
             <EditText
                 android:id="@+id/ed_username"
                 android:layout_width="match_parent"
-                android:layout_height="35dp"
+                android:layout_height="45dp"
                 android:background="@drawable/et_style"
                 android:ems="10"
                 android:hint="Masukkan Username"
@@ -85,7 +85,7 @@
             <EditText
                 android:id="@+id/ed_password"
                 android:layout_width="match_parent"
-                android:layout_height="35dp"
+                android:layout_height="45dp"
                 android:background="@drawable/et_style"
                 android:ems="10"
                 android:hint="Masukkan Password"
@@ -106,7 +106,7 @@
             <Button
                 android:id="@+id/btn_login1"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:layout_marginTop="9dp"
                 android:backgroundTint="@color/orange"
                 android:onClick="postLogin"
