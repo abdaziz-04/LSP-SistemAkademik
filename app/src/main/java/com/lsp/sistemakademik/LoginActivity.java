@@ -35,7 +35,7 @@ public class LoginActivity extends AppCompatActivity {
         String username = ETUsername.getText().toString();
         String pw = ETPassword.getText().toString();
 
-        if (username.equals("abdaziz1713@gmail.com") && pw.equals("aziz123")) {
+        if (username.equals("abdaziz04") && pw.equals("aziz123")) {
             Intent intent = new Intent(getApplicationContext(), MainActivity.class);
             startActivity(intent);
             Toast.makeText(this, "Login Berhasil!", Toast.LENGTH_LONG).show();
