@@ -38,7 +38,7 @@ public class ListMahasiswaActivity extends AppCompatActivity {
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ListMahasiswaActivity.this, InputDataActivity.class);
+                Intent intent = new Intent(ListMahasiswaActivity.this, EditorActivity.class);
                 startActivity(intent); // You forgot to start the activity
             }
         });
@@ -61,7 +61,7 @@ public class ListMahasiswaActivity extends AppCompatActivity {
                     public void onClick(DialogInterface dialogInterface, int i) {
                         switch (i) {
                             case 0:
-                                Intent intent = new Intent(ListMahasiswaActivity.this, InputDataActivity.class);
+                                Intent intent = new Intent(ListMahasiswaActivity.this, EditorActivity.class);
                                 intent.putExtra("id", id);
                                 intent.putExtra("name", name);
                                 intent.putExtra("tglLahir", tglLahir);

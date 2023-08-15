@@ -19,7 +19,7 @@
             android:name=".UpdateDataActivity"
             android:exported="false" />
         <activity
-            android:name=".InputDataActivity"
+            android:name=".EditorActivity"
             android:exported="false" />
         <activity
             android:name=".DetailMahasiswaActivity"
