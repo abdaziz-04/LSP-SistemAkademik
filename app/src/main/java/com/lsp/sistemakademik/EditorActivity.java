@@ -32,6 +32,7 @@ public class EditorActivity extends AppCompatActivity {
         name = getIntent().getStringExtra("name");
         jenisKelamin = getIntent().getStringExtra("jenisKelamin");
         tglLahir = getIntent().getStringExtra("tglLahir");
+        alamat = getIntent().getStringExtra("alamat"); // Add this line
 
         if (id == null || id.equals("")) {
             setTitle("Tambah Users");

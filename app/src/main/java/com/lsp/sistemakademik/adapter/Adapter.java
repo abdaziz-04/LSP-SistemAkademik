@@ -48,7 +48,7 @@ public class Adapter extends BaseAdapter {
             inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         }
         if (view == null && inflater != null) {
-            view = inflater.inflate(R.layout.activity_list_mahasiswa, null);
+            view = inflater.inflate(R.layout.detail_mahasiswa, null);
         }
         if(view != null) {
         Name = view.findViewById(R.id.tv_nama);
