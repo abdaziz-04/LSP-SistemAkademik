@@ -49,7 +49,7 @@ public class Helper extends SQLiteOpenHelper {
         return list;
     }
 
-    public void insert (String name, String jenisKelamin, String tglLahir, String alamat) {
+    public void insert (String name, String jenisKelamin, String tglLahir, String alamat, String s) {
         SQLiteDatabase db = this.getWritableDatabase();
         String QUERY = "INSERT INTO mahasiswa (name, email) VALUES ('"+name+"','"+jenisKelamin+"', '"+tglLahir+"', '"+alamat+"')";
         db.execSQL(QUERY);
@@ -66,4 +66,6 @@ public class Helper extends SQLiteOpenHelper {
         String QUERY = "DELETE FROM mahasiswa WHERE id = " + id;
         db.execSQL(QUERY);
     }
+
+
 }
