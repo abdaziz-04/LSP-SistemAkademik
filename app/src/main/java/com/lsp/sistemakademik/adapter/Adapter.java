@@ -47,9 +47,10 @@ public class Adapter extends BaseAdapter {
         if (inflater == null) {
             inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         }
-        if (view == null) {
+        if (view == null && inflater != null) {
             view = inflater.inflate(R.layout.activity_list_mahasiswa, null);
         }
+        if(view != null) {
         Name = view.findViewById(R.id.tv_nama);
         jenisKelamin = view.findViewById(R.id.tv_jenisKelamin);
         tglLahir = view.findViewById(R.id.tv_tglLahir);
@@ -61,6 +62,7 @@ public class Adapter extends BaseAdapter {
         jenisKelamin.setText(data.getJenisKelamin());
         tglLahir.setText(data.getTglLahir());
         Alamat.setText(data.getAlamat());
+        }
 
         return view;
     }
