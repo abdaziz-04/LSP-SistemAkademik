@@ -23,24 +23,20 @@ public class LoginActivity extends AppCompatActivity {
         ETPassword = findViewById(R.id.ed_password);
         BTNLogin = findViewById(R.id.btn_login);
 
-        BTNLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                checkLogin();
-            }
-        });
+        BTNLogin.setOnClickListener(view -> checkLogin());
     }
 
     private void checkLogin() {
         String username = ETUsername.getText().toString();
         String pw = ETPassword.getText().toString();
-
-        if (username.equals("abdaziz04") && pw.equals("aziz123")) {
-            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-            startActivity(intent);
-            Toast.makeText(this, "Login Berhasil!", Toast.LENGTH_LONG).show();
-        } else {
-            Toast.makeText(this, "Username/Password salah!", Toast.LENGTH_LONG).show();
-        }
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(intent);
+//        if (username.equals("abdaziz04") && pw.equals("aziz123")) {
+//            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+//            startActivity(intent);
+//            Toast.makeText(this, "Login Berhasil!", Toast.LENGTH_LONG).show();
+//        } else {
+//            Toast.makeText(this, "Username/Password salah!", Toast.LENGTH_LONG).show();
+//        }
     }
 }

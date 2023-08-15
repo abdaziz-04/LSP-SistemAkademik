@@ -63,6 +63,7 @@ public class EditorActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "Silahkan isi semua data", Toast.LENGTH_SHORT).show();
         } else {
             db.insert(edname.getText().toString(), edjenisKelamin.getText().toString(), edtglLahir.getText().toString(), edalamat.getText().toString());
+            finish();
         }
     }
 
@@ -71,6 +72,7 @@ public class EditorActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "Silahkan isi semua data", Toast.LENGTH_SHORT).show();
         } else {
             db.update(Integer.parseInt(id), edname.getText().toString(), edjenisKelamin.getText().toString(), edtglLahir.getText().toString(), edalamat.getText().toString());
+            finish();
         }
     }
 }

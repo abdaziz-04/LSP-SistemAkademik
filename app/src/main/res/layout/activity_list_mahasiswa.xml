@@ -16,9 +16,11 @@
 
     <Button
         android:id="@+id/btnAdd"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
         android:layout_alignParentBottom="true"
-        android:text="Button" />
+        android:layout_centerHorizontal="true"
+        android:text="Tambah"
+        app:cornerRadius="8sp" />
 
 </RelativeLayout>
