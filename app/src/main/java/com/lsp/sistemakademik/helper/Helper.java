@@ -51,7 +51,7 @@ public class Helper extends SQLiteOpenHelper {
 
     public void insert (String name, String jenisKelamin, String tglLahir, String alamat) {
         SQLiteDatabase db = this.getWritableDatabase();
-        String QUERY = "INSERT INTO mahasiswa (name, email) VALUES ('"+name+"','"+jenisKelamin+"', '"+tglLahir+"', '"+alamat+"')";
+        String QUERY = "INSERT INTO mahasiswa (name, jenisKelamin, tglLahir, alamat) VALUES ('"+name+"','"+jenisKelamin+"', '"+tglLahir+"', '"+alamat+"')";
         db.execSQL(QUERY);
     }
 

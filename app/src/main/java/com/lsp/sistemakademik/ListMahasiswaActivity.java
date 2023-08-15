@@ -25,7 +25,7 @@ public class ListMahasiswaActivity extends AppCompatActivity {
     AlertDialog.Builder dialog;
     List<Data> lists = new ArrayList<>();
     Adapter adapter;
-    Helper db; // No need to initialize here
+    Helper db;
     Button btnAdd;
 
     @Override
@@ -33,13 +33,14 @@ public class ListMahasiswaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_mahasiswa);
 
-        db = new Helper(getApplicationContext()); // Initialize db here
+        db = new Helper(getApplicationContext());
+
         btnAdd = findViewById(R.id.btnAdd);
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(ListMahasiswaActivity.this, EditorActivity.class);
-                startActivity(intent); // You forgot to start the activity
+                startActivity(intent);
             }
         });
         listView = findViewById(R.id.list_item);
