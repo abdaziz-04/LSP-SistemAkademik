@@ -31,8 +31,8 @@ public class Helper extends SQLiteOpenHelper {
     public ArrayList<HashMap<String, String>> getAll() {
         ArrayList<HashMap<String, String>> list = new ArrayList<>();
         String QUERY = "SELECT * FROM mahasiswa";
-        SQLiteDatabase database = this.getWritableDatabase();
-        Cursor cursor = database.rawQuery(QUERY, null);
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(QUERY, null);
         if (cursor.moveToFirst()) {
             do {
                 HashMap<String, String> map = new HashMap<>();
@@ -50,20 +50,20 @@ public class Helper extends SQLiteOpenHelper {
     }
 
     public void insert (String name, String jenisKelamin, String tglLahir, String alamat) {
-        SQLiteDatabase database = this.getWritableDatabase();
+        SQLiteDatabase db = this.getWritableDatabase();
         String QUERY = "INSERT INTO mahasiswa (name, email) VALUES ('"+name+"','"+jenisKelamin+"', '"+tglLahir+"', '"+alamat+"')";
-        database.execSQL(QUERY);
+        db.execSQL(QUERY);
     }
 
     public void update (int id, String name, String jenisKelamin, String tglLahir, String alamat) {
-        SQLiteDatabase database = this.getWritableDatabase();
+        SQLiteDatabase db = this.getWritableDatabase();
         String QUERY = "UPDATE mahasiswa SET name = '"+name+"','"+jenisKelamin+"', '"+tglLahir+"', '"+alamat+"' WHERE id = " + id;
-        database.execSQL(QUERY);
+        db.execSQL(QUERY);
     }
 
     public void DELETE (int id) {
-        SQLiteDatabase database = this.getWritableDatabase();
+        SQLiteDatabase db = this.getWritableDatabase();
         String QUERY = "DELETE FROM mahasiswa WHERE id = " + id;
-        database.execSQL(QUERY);
+        db.execSQL(QUERY);
     }
 }
