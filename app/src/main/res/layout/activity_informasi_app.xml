@@ -9,10 +9,20 @@
     android:textAlignment="center"
     tools:context=".InformasiAppActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="Informasi Aplikasi"
+        app:titleTextColor="@color/white" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar2"
         android:padding="40dp"
         android:text="SISAKAD merupakan sebuah aplikas pengelolaan akademik di pergurusn tinggi untuk melihat berbagai data mahasiswa yang tersedia di perguruan tinggi tersebut"
         android:textAlignment="inherit"

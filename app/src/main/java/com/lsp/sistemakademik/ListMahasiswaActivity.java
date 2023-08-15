@@ -43,44 +43,19 @@ public class ListMahasiswaActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
         listView = findViewById(R.id.list_item);
         adapter = new Adapter(ListMahasiswaActivity.this, lists);
         listView.setAdapter(adapter);
 
-        listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+        // Set item click listener
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
-                final String id = lists.get(i).getId();
-                final String name = lists.get(i).getName();
-                final String jenisKelamin = lists.get(i).getJenisKelamin();
-                final String tglLahir = lists.get(i).getTglLahir();
-                final String alamat = lists.get(i).getAlamat();
-                final CharSequence[] dialogItem = {"Edit", "Hapus"};
-                dialog = new AlertDialog.Builder(ListMahasiswaActivity.this);
-                dialog.setItems(dialogItem, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        switch (i) {
-                            case 0:
-                                Intent intent = new Intent(ListMahasiswaActivity.this, EditorActivity.class);
-                                intent.putExtra("id", id);
-                                intent.putExtra("name", name);
-                                intent.putExtra("tglLahir", tglLahir);
-                                intent.putExtra("jenisKelamin", jenisKelamin);
-                                intent.putExtra("alamat", alamat);
-                                startActivity(intent); // Start the activity
-                                break;
-                            case 1:
-                                db.DELETE(Integer.parseInt(id));
-                                lists.clear();
-                                getData(); // Refresh data after deletion
-                                break;
-                        }
-                    }
-                }).show();
-                return false;
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                showOptionsDialog(i);
             }
         });
+
         getData();
     }
 
@@ -103,6 +78,48 @@ public class ListMahasiswaActivity extends AppCompatActivity {
             lists.add(data);
         }
         adapter.notifyDataSetChanged();
+    }
+
+    private void showOptionsDialog(final int position) {
+        final Data selectedData = lists.get(position);
+        final String id = selectedData.getId();
+        final String name = selectedData.getName();
+        final String jenisKelamin = selectedData.getJenisKelamin();
+        final String tglLahir = selectedData.getTglLahir();
+        final String alamat = selectedData.getAlamat();
+
+        final CharSequence[] dialogItems = {"Lihat Data", "Edit", "Hapus"};
+        dialog = new AlertDialog.Builder(ListMahasiswaActivity.this);
+        dialog.setItems(dialogItems, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                switch (i) {
+                    case 0:
+                        Data selectedData = lists.get(i);
+                        Intent lihat = new Intent(ListMahasiswaActivity.this, DetailDataActivity.class);
+                        lihat.putExtra("nama", selectedData.getName());
+                        lihat.putExtra("jenisKelamin", selectedData.getJenisKelamin());
+                        lihat.putExtra("tglLahir", selectedData.getTglLahir());
+                        lihat.putExtra("alamat", selectedData.getAlamat());
+                        startActivity(lihat);
+                        break;
+                    case 1:
+                        Intent edit = new Intent(ListMahasiswaActivity.this, EditorActivity.class);
+                        edit.putExtra("id", id);
+                        edit.putExtra("name", name);
+                        edit.putExtra("tglLahir", tglLahir);
+                        edit.putExtra("jenisKelamin", jenisKelamin);
+                        edit.putExtra("alamat", alamat);
+                        startActivity(edit);
+                        break;
+                    case 2:
+                        db.DELETE(Integer.parseInt(id));
+                        lists.clear();
+                        getData();
+                        break;
+                }
+            }
+        }).show();
     }
 
     @Override

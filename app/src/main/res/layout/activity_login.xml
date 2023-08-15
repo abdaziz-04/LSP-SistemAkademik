@@ -94,15 +94,6 @@
                 android:textColor="@color/abu"
                 android:textColorHint="@color/abu" />
 
-            <TextView
-                android:id="@+id/tv_forgotpw"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="8dp"
-                android:text="Lupa Password?"
-                android:textAlignment="viewEnd"
-                android:textColor="@color/abu" />
-
             <Button
                 android:id="@+id/btn_login"
                 android:layout_width="match_parent"
@@ -116,28 +107,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/id_nanyaakun"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingTop="6dp"
-                    android:text="Belum Punya Akun?"
-                    android:textColor="@color/abu" />
-
-                <TextView
-                    android:id="@+id/btn_Register"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:onClick="postRegister"
-                    android:paddingStart="8dp"
-                    android:text="Register"
-                    android:textColor="@color/colorPrimary"
-                    android:textStyle="bold"/>
-
-            </LinearLayout>
+                android:orientation="horizontal"/>
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>

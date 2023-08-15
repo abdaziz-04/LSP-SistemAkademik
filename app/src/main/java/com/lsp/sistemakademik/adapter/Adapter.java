@@ -14,7 +14,7 @@ import com.lsp.sistemakademik.model.Data;
 import java.util.List;
 
 public class Adapter extends BaseAdapter {
-    TextView Name, tglLahir, Alamat, jenisKelamin;
+    TextView Name, jenisKelamin;
     private Activity activity;
     private LayoutInflater inflater;
     private List<Data> lists;
@@ -50,15 +50,11 @@ public class Adapter extends BaseAdapter {
         if (view != null) {
             Name = view.findViewById(R.id.tv_nama);
             jenisKelamin = view.findViewById(R.id.tv_jenisKelamin);
-            tglLahir = view.findViewById(R.id.tv_tglLahir);
-            Alamat = view.findViewById(R.id.tv_alamat);
 
             Data data = lists.get(i);
 
             Name.setText(data.getName());
             jenisKelamin.setText(data.getJenisKelamin());
-            tglLahir.setText(data.getTglLahir());
-            Alamat.setText(data.getAlamat());
         }
 
         return view;

@@ -4,52 +4,73 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/putihabu"
     android:orientation="vertical"
-    android:padding="16dp"
-    tools:context=".EditorActivity"
-    android:background="@color/putihabu">
+    tools:context=".EditorActivity">
 
-    <EditText
-        android:id="@+id/ed_nama"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:background="@drawable/et_style"
-        android:hint="Nama Mahasiswa"
-        android:paddingStart="8dp" />
+    <!-- Toolbar -->
 
-    <EditText
-        android:id="@+id/ed_jeniKelamin"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/et_style"
-        android:hint="Jenis Kelamin"
-        android:paddingStart="8dp" />
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="Editor Data"
+        app:titleTextColor="@color/white" />
 
-    <EditText
-        android:id="@+id/ed_tglLahir"
+    <!-- EditText fields -->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/et_style"
-        android:hint="Tanggal Lahir"
-        android:paddingStart="8dp" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
 
-    <EditText
-        android:id="@+id/ed_alamat"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/et_style"
-        android:hint="Alamat"
-        android:paddingStart="8dp" />
+        <EditText
+            android:id="@+id/ed_nama"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/et_style"
+            android:hint="Nama Mahasiswa"
+            android:paddingStart="8dp" />
 
-    <Button
-        android:id="@+id/btn_simpan"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="10dp"
-        android:text="SIMPAN"
-        app:cornerRadius="8dp" />
+        <EditText
+            android:id="@+id/ed_jeniKelamin"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/et_style"
+            android:hint="Jenis Kelamin"
+            android:paddingStart="8dp" />
+
+        <EditText
+            android:id="@+id/ed_tglLahir"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/et_style"
+            android:hint="Tanggal Lahir"
+            android:paddingStart="8dp" />
+
+        <EditText
+            android:id="@+id/ed_alamat"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/et_style"
+            android:hint="Alamat"
+            android:paddingStart="8dp" />
+
+        <Button
+            android:id="@+id/btn_simpan"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="16dp"
+            android:text="SIMPAN"
+            app:cornerRadius="8dp" />
+    </LinearLayout>
+
+    <!-- Button -->
 
 </LinearLayout>

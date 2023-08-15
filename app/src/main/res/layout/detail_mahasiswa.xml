@@ -8,23 +8,20 @@
         android:id="@+id/tv_nama"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Nama" />
+        android:hint="Nama"
+        android:padding="5dp"
+        android:paddingStart="15dp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tv_jenisKelamin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Jenis Kelamin" />
+        android:hint="Jenis Kelamin"
+        android:padding="5dp"
+        android:paddingStart="15dp"
+        android:textColor="@color/abu" />
 
-    <TextView
-        android:id="@+id/tv_tglLahir"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Tanggal Lahir" />
-
-    <TextView
-        android:id="@+id/tv_alamat"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Alamat" />
 </LinearLayout>
