@@ -28,10 +28,10 @@ public class DetailDataActivity extends AppCompatActivity {
             String alamatValue = extras.getString("alamat");
 
             // Set text ke TextView
-            nama.setText("Nama: " + namaValue);
-            jenisKelamin.setText("Jenis Kelamin: " + jenisKelaminValue);
-            tglLahir.setText("Tanggal Lahir: " + tglLahirValue);
-            alamat.setText("Alamat: " + alamatValue);
+            nama.setText(namaValue);
+            jenisKelamin.setText( jenisKelaminValue);
+            tglLahir.setText( tglLahirValue);
+            alamat.setText( alamatValue);
         }
     }
 }

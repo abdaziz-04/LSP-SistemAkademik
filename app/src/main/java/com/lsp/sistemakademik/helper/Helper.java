@@ -55,9 +55,9 @@ public class Helper extends SQLiteOpenHelper {
         db.execSQL(QUERY);
     }
 
-    public void update (int id, String name, String jenisKelamin, String tglLahir, String alamat) {
+    public void update(int id, String name, String jenisKelamin, String tglLahir, String alamat) {
         SQLiteDatabase db = this.getWritableDatabase();
-        String QUERY = "UPDATE mahasiswa SET name = '"+name+"','"+jenisKelamin+"', '"+tglLahir+"', '"+alamat+"' WHERE id = " + id;
+        String QUERY = "UPDATE mahasiswa SET name = '" + name + "', jenisKelamin = '" + jenisKelamin + "', tglLahir = '" + tglLahir + "', alamat = '" + alamat + "' WHERE id = " + id;
         db.execSQL(QUERY);
     }
 

@@ -33,7 +33,8 @@
             android:layout_marginTop="16dp"
             android:background="@drawable/et_style"
             android:hint="Nama Mahasiswa"
-            android:paddingStart="8dp" />
+            android:paddingStart="8dp"
+            />
 
         <EditText
             android:id="@+id/ed_jeniKelamin"

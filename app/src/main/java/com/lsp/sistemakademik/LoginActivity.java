@@ -29,14 +29,13 @@ public class LoginActivity extends AppCompatActivity {
     private void checkLogin() {
         String username = ETUsername.getText().toString();
         String pw = ETPassword.getText().toString();
-        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-        startActivity(intent);
-//        if (username.equals("abdaziz04") && pw.equals("aziz123")) {
-//            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-//            startActivity(intent);
-//            Toast.makeText(this, "Login Berhasil!", Toast.LENGTH_LONG).show();
-//        } else {
-//            Toast.makeText(this, "Username/Password salah!", Toast.LENGTH_LONG).show();
-//        }
+
+        if (username.equals("abdaziz04") && pw.equals("aziz123")) {
+            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+            startActivity(intent);
+            Toast.makeText(this, "Login Berhasil!", Toast.LENGTH_LONG).show();
+        } else {
+            Toast.makeText(this, "Username/Password salah!", Toast.LENGTH_LONG).show();
+        }
     }
 }
